@@ -686,10 +686,15 @@ background-color: var(--color-lightblue);
 .model-close {
     position: absolute;
     top: 24px;
+    display: flex;
     right: 24px;
     background: var(--color-light);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
 }
 
 .backdrop.is-hidden .model {
@@ -699,8 +704,9 @@ background-color: var(--color-lightblue);
 .close {
     border: none;
     display: inline-block;
-    width: 24px;
-    height: 24px;
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
 }
 
 
