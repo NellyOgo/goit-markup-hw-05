@@ -144,7 +144,12 @@ img {
     background-color: currentColor;
     border-radius: 2px;
     content: '';
+
+}
+
+.current {
     color: var(--color-lightblue);
+    fill: var(--color-lightblue)
 }
 
 /*hero-index*/
@@ -534,22 +539,22 @@ background-color: var(--color-lightblue);
     padding: 12px 24px;
 }
 
+/*
 .button-sectionone:focus {
     background-color: var(--color-lightblue);
     color: var(--color-inverted);
     box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
     border-color: var(--color-lightblue);
-}
+    outline: none;
+}*/
 
-.button-sectionone:hover {
-    display: flex;
-    text-align: center;
+.button-sectionone:hover, .button-sectionone:focus{  
     background-color: var(--color-lightblue);
     border-color: var(--color-lightblue);
     color: var(--color-inverted);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
+    outline: none;
 }
 
 .pages-button {
@@ -665,7 +670,7 @@ background-color: var(--color-lightblue);
 .backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
-   pointer-events: none;
+    pointer-events: none;
 }
 
 .model {
@@ -718,5 +723,5 @@ background-color: var(--color-lightblue);
 
 .close:hover,
 .close:focus {
-    color: var(--color-inverted);
+    fill: var(--color-inverted)
 }
