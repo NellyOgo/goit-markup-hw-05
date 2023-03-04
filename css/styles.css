@@ -110,7 +110,7 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-decoration: none;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--color-variable) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navig-logoitem:focus {
@@ -132,7 +132,7 @@ img {
     color: var(--color-two);
     text-decoration: none;
     font-style: normal;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--color-lightblue) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
@@ -142,7 +142,7 @@ img {
 
 .link.current::after {
     position: absolute;
-    bottom: 0;
+    bottom: -1px; 
     display: block;
     width: 100%;
     height: 4px;
@@ -196,7 +196,7 @@ img {
     line-height: var(--line-height15);
     cursor: pointer;
     padding: 16px 32px;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--color-variable) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-one:focus {
@@ -366,7 +366,7 @@ background-color: var(--color-lightblue);
 .customers-icon {
     width: 104px;
     height: 56px;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--color-lightblue) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon:hover, .customers-icon:focus {
@@ -380,15 +380,10 @@ background-color: var(--color-lightblue);
     justify-content: center;
     gap: 24px;
     border-color: var(--color-gray);
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--color-lightblue) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icons-customers:hover {
-    border-color: var(--color-lightblue);
-    border-radius: 4px;
-}
-
-.icons-customers:focus {
+.icons-customers:hover, .icons-customers:focus {
     border-color: var(--color-lightblue);
     border-radius: 4px;
 }
@@ -402,7 +397,7 @@ background-color: var(--color-lightblue);
    justify-content: center;
    align-items: center;
    fill: var(--color-gray);
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--color-lightblue) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover, .customers-link:focus {
@@ -436,7 +431,7 @@ background-color: var(--color-lightblue);
     margin-top: 16px;
     margin-bottom: 0px;
     line-height: var(--line-height15);
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--color-variable) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-text:focus {
@@ -485,7 +480,7 @@ background-color: var(--color-lightblue);
     background-color: #FFFFFF 10%;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: #31D0AA 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -523,7 +518,9 @@ background-color: var(--color-lightblue);
     line-height: var(--line-height15);
     cursor: pointer;
     padding: 12px 24px;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--color-lightblue) 250ms, border-color var(--color-lightblue)  250ms, box-shadow 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 2px 1px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12) 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-sectionone:hover, .button-sectionone:focus{  
@@ -570,6 +567,7 @@ background-color: var(--color-lightblue);
     width: 100%;
     height: 100%;
     transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -579,17 +577,23 @@ background-color: var(--color-lightblue);
 
 }
 
+/*
 .card-all:hover .card-decor {
     transform: translateY(0);
-
-}
+}*/
 
 .card-link {
     display: block;
     text-decoration: none;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.card-link:hover .card-decor {
+    transform: translateY(0);
+}
+
+.card-link :hover .card-decor {
+    transform: translateY(0);
+}
 
 .card-portfolio:hover .card-link {
     transform: translateY(0);
@@ -671,6 +675,7 @@ background-color: var(--color-lightblue);
     justify-content: center;
     width: 24px;
     height: 24px;
+    cursor: pointer;
 }
 
 
@@ -679,6 +684,7 @@ background-color: var(--color-lightblue);
     background: var(--color-lightblue);
     border-radius: 4px;
     border-radius: 50%;
+    fill: var(--color-inverted)
 }
 
 
@@ -687,11 +693,7 @@ background-color: var(--color-lightblue);
     display: inline-block;
     width: 8px;
     height: 8px;
-    cursor: pointer;
     color: #000000; 
 }
 
-.close:hover,
-.close:focus {
-    fill: var(--color-inverted)
-}
+
